@@ -1,13 +1,92 @@
 @media only screen and (min-width:1200px){
   #HomePage {
-    height: calc(100%);
+    height: calc(170%);
     width: 100%;
   }
 
   #WeddingPhoto{
-    height: 70%;
-    width: 500px;
+    height: 40%;
+    width: 70%;
+    margin-left: calc((100% - 70%) / 2 );
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    /* background-size: 100% 100%; */
+    background-size: cover;
+    background-image: url("../../images/1.jpg");
+  }
+
+  #TextArea{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #PerfectBrideTitle{
+    color: #c68803;
+    font-family: Arial;
+    font-size: 50px;
+    margin-top: 20px;
+  }
+
+  #Intro1{
+    width: 50%;
+    color: #c68803;
+    font-family: Arial;
+    font-size: 25px;
+    margin-top: 20px;
+  }
+
+  #Intro2{
+    width: 50%;
+    color: #c68803;
+    font-family: Arial;
+    font-size: 25px;
+    margin-top: 20px;
+  }
+
+  #OtherImagesArea{
+    height: 30%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% calc((100% - 40%) / 3) calc((100% - 40%) / 3) calc((100% - 40%) / 3) 20%;
+    grid-template-rows: 100%
+  }
+
+  #OtherImages1{
+    width: 90%;
+    margin-left: 5%;
+    height: 80%;
+    margin-top: 10%;
+    grid-row:1;
+    grid-column: 2;
+    background-repeat: no-repeat;
+    /* background-size: 100% 100%; */
+    background-size: cover;
+    background-image: url("../../images/2.jpg");
+  }
+
+  #OtherImages2{
+    width: 90%;
+    margin-left: 5%;
+    height: 80%;
+    margin-top: 10%;
+    grid-row:1;
+    grid-column: 3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../images/19.jpg");
+  }
+
+  #OtherImages3{
+    width: 90%;
+    margin-left: 5%;
+    height: 80%;
+    margin-top: 10%;
+    grid-row:1;
+    grid-column: 4;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../images/3.jpg");
   }
 }
