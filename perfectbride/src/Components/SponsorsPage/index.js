@@ -29,8 +29,13 @@ class SponsorsPage extends Component {
           </div>
           <div className="SponsorImages" id="Sponsor2Image"></div>
         </div>
-        <div id="CollectiveSponsorDesc"></div>
-
+        <div id="CollectiveSponsorDesc">
+          <div id="CollectiveSponsorTextBox">
+            <div id="InnerCollectiveSponsorText">
+            {TEXT.CollectiveSponsorText}
+            </div>
+          </div>   
+        </div>
       </div>
     )
   }

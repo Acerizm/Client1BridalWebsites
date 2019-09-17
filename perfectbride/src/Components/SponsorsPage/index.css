@@ -3,8 +3,7 @@
   #SponsorsPageContainer{
     background-color: #f5ea74;
     height: 200%;
-    width: 100%
-
+    width: 100%;
   }
 
   #SponsorTitle{
@@ -19,7 +18,7 @@
   #Sponsor1{
     height: calc(100% / 4);
     width: 100%;
-    border: 2px solid black;
+    border-bottom: 2px dashed black;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -29,7 +28,7 @@
     height: calc(100% / 4);
     width: 100%;
     border-bottom: 2px solid black;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -38,7 +37,8 @@
   #CollectiveSponsorDesc{
     height: calc(50% - 10%);
     width: 100%;
-    background-color: green;
+    /* background-color: green; */
+    border-bottom: 2px solid black;
   }
 
   #SponsorTextArea{
@@ -75,23 +75,56 @@
 
   .FirstSponsorText{
     margin-bottom: 5px;
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
   }
 
   .SecondSponsorText{
     margin-bottom: 5px;
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
   }
 
   .ThirdSponsorText{
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  #SponsorImages{
+  #CollectiveSponsorDesc{
+    height: 49%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../images/SponsorsFashionShow.jpg");
+    position: relative;
+  }
 
+  #CollectiveSponsorTextBox{
+    /* background-color: black; */
+    /* background-color: transparent; */
+    background-color: rgb(4, 23, 31);
+    opacity: 0.8;
+    height: 250px;
+    width: 65%;
+    min-width: 1200px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 50px;
+    margin-right: 2%;
+    border-radius: 10px;
+  }
+
+  #InnerCollectiveSponsorText{
+    width: 95%;
+    height: 80%;
+    /* border: 2px solid red; */
+    font-size: 30px;
   }
 
 }

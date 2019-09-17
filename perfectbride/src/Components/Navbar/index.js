@@ -18,7 +18,7 @@ class NavBar extends Component {
           <Link to={ROUTES.HOME_PAGE} className="link"><span className="NavLink">Home</span></Link>
           <Link to={ROUTES.ORGANIZER_PAGE} className="link"><span className="NavLink">Organizer</span></Link>
           <Link to={ROUTES.SPONSORS_PAGE} className="link"><span className="NavLink">Sponsors</span></Link>
-          <Link to={ROUTES.HOME_PAGE} className="link"><span className="NavLink">Gallery</span></Link>
+          <Link to={ROUTES.GALLERY_PAGE} className="link"><span className="NavLink">Gallery</span></Link>
           <Link to={ROUTES.HOME_PAGE} className="link"><span className="NavLink">Videos</span></Link>
         </div>
       </div>
