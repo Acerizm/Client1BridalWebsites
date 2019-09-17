@@ -16,10 +16,9 @@ class NavBar extends Component {
         <div id="PerfectBrideLogo"></div>
         <div id="NavbarLinksContainer">
           <Link to={ROUTES.HOME_PAGE} className="link"><span className="NavLink">Home</span></Link>
-          <Link to={ROUTES.HOME_PAGE} className="link"><span className="NavLink">Organizer</span></Link>
-          <Link to={ROUTES.HOME_PAGE} className="link"><span className="NavLink">About</span></Link>
+          <Link to={ROUTES.ORGANIZER_PAGE} className="link"><span className="NavLink">Organizer</span></Link>
+          <Link to={ROUTES.SPONSORS_PAGE} className="link"><span className="NavLink">Sponsors</span></Link>
           <Link to={ROUTES.HOME_PAGE} className="link"><span className="NavLink">Gallery</span></Link>
-          <Link to={ROUTES.HOME_PAGE} className="link"><span className="NavLink">Sponsors</span></Link>
           <Link to={ROUTES.HOME_PAGE} className="link"><span className="NavLink">Videos</span></Link>
         </div>
       </div>

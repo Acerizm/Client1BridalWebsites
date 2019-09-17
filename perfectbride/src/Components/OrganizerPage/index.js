@@ -15,6 +15,8 @@ class OrganizerPage extends Component {
         <div id="black">
           <span id="Chi1">{TEXT.Chi1}</span>
           <span id="Intro">{TEXT.Intro}</span>
+          <span id="CompanyName">{TEXT.CompanyName}</span>
+          <span id="CompanyDesc">{TEXT.CompnayDesc}</span>
         </div>
         <div id="office">
           <span id="Chi2">{TEXT.Chi2}</span>

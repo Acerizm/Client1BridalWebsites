@@ -1,0 +1,97 @@
+@media only screen and (min-width:1200px){
+
+  #SponsorsPageContainer{
+    background-color: #f5ea74;
+    height: 200%;
+    width: 100%
+
+  }
+
+  #SponsorTitle{
+    display: block;
+    color: white;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 130px;
+    margin-left: calc((100% - 130px) / 2);
+  }
+
+  #Sponsor1{
+    height: calc(100% / 4);
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #Sponsor2{
+    height: calc(100% / 4);
+    width: 100%;
+    border-bottom: 2px solid black;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #CollectiveSponsorDesc{
+    height: calc(50% - 10%);
+    width: 100%;
+    background-color: green;
+  }
+
+  #SponsorTextArea{
+    width: 60%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    margin-left:5%;
+  }
+
+  #Sponsor1Image{
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    background-repeat: no-repeat;
+    /* background-size: 100% 100%; */
+    background-size: cover;
+    background-image: url("../../images/Sponsor1.png");
+    border: 2px solid black;
+    margin-left: 10%;
+  }
+
+  #Sponsor2Image{
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    background-repeat: no-repeat;
+    /* background-size: 100% 100%; */
+    background-size: cover;
+    background-image: url("../../images/Sponsor2.jpg");
+    border: 2px solid black;
+    margin-left: 10%;
+  }
+
+  .FirstSponsorText{
+    margin-bottom: 5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .SecondSponsorText{
+    margin-bottom: 5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .ThirdSponsorText{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #SponsorImages{
+
+  }
+
+}
