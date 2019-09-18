@@ -1,17 +1,63 @@
 @media only screen and (min-width:1200px){
 
   #GalleryPageMainContainer {
-    background-color: black;
+    border: 2px solid black;
     height: 62.3%;
+    min-height: 600px;
     width: 100%;
   }
 
-  #MainImageSelected{
-    height: auto;
+  #MainImageContainer {
+    height: 400px;
+    max-height: 400px;
     width: 600px;
     margin-left: calc((100% - 600px) / 2 );
     margin-top: 20px;
     min-width: 600px;
+    border: 1px solid black;
+    border-bottom: none;
+    position: relative;
+    border-radius: 0 3px 3px 0;
+  }
+
+  #prev {
+    position: absolute;
+    height: 50px;
+    width: 40px;
+    bottom: calc(100% / 2 - 25px);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 3px 3px 0;
+    color: white;
+  }
+
+  #next {
+    position: absolute;
+    height: 50px;
+    width: 40px;
+    bottom: calc(100% / 2 - 25px);
+    left: calc(100% - 40px);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  #prev:hover,
+  #next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+  #MainImageSelected{
+    height: 100%;
+    /* max-height: 400px; */
+    width: 600px;
+    /* margin-left: calc((100% - 600px) / 2 );
+    margin-top: 20px;
+    min-width: 600px; */
     vertical-align: middle;
   }
 
@@ -19,20 +65,33 @@
     height: 40px;
     width: 600px;
     margin-left: calc((100% - 600px) / 2 );
-    background-color: red;
+    background-color:#c68803;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    /* border-top: 2px solid black;
+    border-bottom: 2px solid black; */
+    border: 1px solid black;
   }
 
   #AllImagesRow{
     height: 100px;
     width: 600px;
-    background-color: green;
     margin-left: calc((100% - 600px) / 2 );
     display: flex;
     flex-direction: row;
+    border: 1px solid black;
+    border-top: none;
   }
 
   .AllImages{
     height: 100%;
     width: calc(100% / 5);
+    cursor: pointer;
+  }
+
+  .AllImages:hover{
+    opacity: 1;
   }
 }
