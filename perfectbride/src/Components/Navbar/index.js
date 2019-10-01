@@ -3,14 +3,12 @@ import "./index.css";
 import {Link} from "react-router-dom";
 import * as ROUTES from "../../Routes/index.js";
 
-class NavBar extends Component {
-  constructor(props){
-    super(props);
+//import window height here
+import {useWindowWidth, useWindowHeight} from "../ResponsiveComponent/index.js";
 
-    this.state = {};
-  }
-
-  render(){
+const NavBar = () => { 
+  let windowWidth = useWindowWidth();
+  console.log(windowWidth);
     return(
       <div id="NavBarContainer">
         <div id="PerfectBrideLogo"></div>
@@ -24,6 +22,14 @@ class NavBar extends Component {
       </div>
     )
   }
-}
+
+const MobileNavbar = () => {
+    let windowWidth = useWindowWidth();
+    return(
+      <div id="NavbarContainer">
+        Test
+      </div>
+    )
+  }
 
 export default NavBar
