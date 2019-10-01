@@ -32,3 +32,6 @@ export const useWindowHeight = () => {
 
     return windowHeight;
 }
+
+export const minDesktopWidth = 1200;
+export const minTabletWidth = 

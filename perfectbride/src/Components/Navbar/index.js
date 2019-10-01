@@ -27,7 +27,8 @@ const MobileNavbar = () => {
     let windowWidth = useWindowWidth();
     return(
       <div id="NavbarContainer">
-        Test
+        <div id="PerfectBrideLogo"></div>
+        <div id="HamburgerMenu"></div>
       </div>
     )
   }
