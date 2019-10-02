@@ -42,6 +42,8 @@
     height: 100px;
     width: 100%;
     border: 1px solid black;
+    display: flex;
+    flex-direction: row;
   }
   
   #PerfectBrideHeadingContainer{
@@ -51,12 +53,20 @@
     justify-content: center;
     align-items: center;
   }
+  
   #PerfectBrideHeading{
     font-size: 40px;
     display: inline-block;
     border: 2px solid red;
     width: 100%;
     font-family: Arial;
+  }
+  
+  #HamburgerMenu{
+    border: 2px solid black;
+    height: 100%;
+    width: 150px;
+    margin-left: calc(100% - 250px - 150px);
   }
 
 

@@ -6,6 +6,10 @@ import * as ROUTES from "../../Routes/index.js";
 //import window height here
 import {useWindowWidth, useWindowHeight} from "../ResponsiveComponent/index.js";
 import {minDesktopWidth,minMobileWidth,minTabletWidth} from "../ResponsiveComponent/index.js";
+import MenuIcon from '@material-ui/icons/Menu';
+
+//import material ui stuff here
+import { withStyles } from '@material-ui/core/styles';
 
 const NavBar = () => { 
   let currentWindowWidth = useWindowWidth();
@@ -25,6 +29,14 @@ const NavBar = () => {
   
     return currentNavbar
   }
+  
+
+const HamburgerIcon = withStyles({
+  root : {
+    height: "100%",
+    width: "100%",
+  }
+})(MenuIcon);
 
 const TabletNavbar = () => {
     return(
@@ -32,7 +44,9 @@ const TabletNavbar = () => {
         <div id="PerfectBrideHeadingContainer">
           <span id="PerfectBrideHeading">Perfect Bride</span>
         </div>
-        <div id="HamburgerMenu"></div>
+        <div id="HamburgerMenu">
+         <HamburgerIcon></HamburgerIcon>
+        </div>
       </div>
     )
   }
