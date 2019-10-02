@@ -93,6 +93,10 @@
     font-size: 15px;
   }
 
+  .NavLink:hover{
+    color: #f1f1f1;
+  }
+
   .link{
     text-decoration: none;
     display: flex;
@@ -103,9 +107,9 @@
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
