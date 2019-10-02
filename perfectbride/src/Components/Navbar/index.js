@@ -10,6 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 //import material ui stuff here
 import { withStyles } from '@material-ui/core/styles';
+import { breakpoints } from "@material-ui/system";
 
 const NavBar = () => { 
   let currentWindowWidth = useWindowWidth();
@@ -43,16 +44,25 @@ const TabletNavbar = () => {
 
   const [openSideNavbar, setSideNavbarStatus] = useState(false);
   let SideNavbar;
+  //code will only run if called
   const changeSidebarStatus = () => {
-    if (openSideNavbar == true){
+    if (openSideNavbar === true){
       setSideNavbarStatus(false);
       SideNavbar = <SideNavbar sideNavbarStatus={openSideNavbar}/>
     }
-    else if (openSideNavbar == false){
+    else if (openSideNavbar === false){
       setSideNavbarStatus(true);
-      SideNavbar = <SideNavbar sideNavbarStatus={openSideNavbar}/>
+      SideNavbar = <SideNavbar sideNavbarStatus={false}/>
+      debugger;
     }
   }
+
+  let status = openSideNavbar;
+  //code will only run for the first time
+  if (SideNavbar == null){
+    SideNavbar = <SideNavbar sideNavbarStatus={status}/>
+  }
+  console.log(SideNavbar);
   return(
     <div id="NavBarContainer">
       <div id="PerfectBrideHeadingContainer">
@@ -66,19 +76,31 @@ const TabletNavbar = () => {
     )
   }
 
-const SideNavbar = (sideNavbarStatus) => {
+const SideNavbar = (props) => {
   let currentSideBarStatus;
-  if (sideNavbarStatus == null){
+  if (props.sideNavbarStatus == null){
     currentSideBarStatus = false;
+    console.log(currentSideBarStatus);
   }
-  else if (sideNavbarStatus == true){
+  else if (props.sideNavbarStatus == true){
     currentSideBarStatus = true;
   }
-  else if (sideNavbarStatus == false){
+  else if (props.sideNavbarStatus == false){
     currentSideBarStatus = false;
+    console.log(currentSideBarStatus);
   }
+  console.log(currentSideBarStatus);
   return(
     <div id="mySidenav" className="sidenav" style={{
+      height: "100%",
+      position: "fixed",
+      zIndex: "1",
+      top: 0,
+      left: 0,
+      backgroundColor: "#111",
+      overflowX: "hidden",
+      transition: "0.5s",
+      paddingTop: "60px",
       width: currentSideBarStatus ? "250px" : "0px"}}>
       <a className="closebtn">&times;</a>
       <a>About</a>

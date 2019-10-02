@@ -10,6 +10,8 @@ import OrganizerPage from "./Components/OrganizerPage/index.js";
 import SponsorsPage from "./Components/SponsorsPage/index.js";
 import GalleryPage from "./Components/GalleryPage/index.js";
 
+console.disableYellowBox = true;
+
 ReactDOM.render(
   <Router>
     <div id="perfectBride">
