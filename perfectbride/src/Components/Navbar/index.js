@@ -14,7 +14,6 @@ import { breakpoints } from "@material-ui/system";
 
 const NavBar = () => { 
   let currentWindowWidth = useWindowWidth();
-  console.log(currentWindowWidth);
   let currentNavbar;
   
   //change navbar according to the width
@@ -41,7 +40,6 @@ const HamburgerIcon = withStyles({
 
 const SideNavbar = (props) => {
   let currentSideBarStatus;
-  console.log(props.sideNavbarStatus);
   if (props.sideNavbarStatus == null){
     currentSideBarStatus = false;
   }
@@ -95,7 +93,6 @@ const TabletNavbar = () => {
   if (currentSideNavbar == null){
     currentSideNavbar = <SideNavbar sideNavbarStatus={status} changeSidebarStatus={changeSidebarStatus}/>
   }
-  console.log(status);
   return(
     <div id="NavBarContainer">
       <div id="PerfectBrideHeadingContainer">
