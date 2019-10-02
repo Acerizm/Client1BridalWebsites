@@ -36,20 +36,29 @@
   }
 }
 
-@media only screen and (min-width: 992px){
+
+@media only screen and (min-width: 992px) and (max-width:1199.99px){
   #NavBarContainer{
-    height: 250px;
+    height: 100px;
     width: 100%;
+    border: 1px solid black;
+  }
+  
+  #PerfectBrideHeadingContainer{
+    height: 100%;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #PerfectBrideHeading{
+    font-size: 40px;
+    display: inline-block;
+    border: 2px solid red;
+    width: 100%;
+    font-family: Arial;
   }
 
-  #PerfectBrideLogo{
-    background-image:url("../../images/perfectBrideLogo.jpg");
-    height: 70%;
-    width: 500px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin-left: calc((100% - 500px) / 2 );
-  }
 
   #NavbarLinksContainer{
     height: 30%;
