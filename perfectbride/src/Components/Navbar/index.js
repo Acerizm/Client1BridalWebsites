@@ -1,4 +1,4 @@
-import React,{Component} from "react";
+import React,{Component, useState} from "react";
 import "./index.css";
 import {Link} from "react-router-dom";
 import * as ROUTES from "../../Routes/index.js";
@@ -39,17 +39,55 @@ const HamburgerIcon = withStyles({
 })(MenuIcon);
 
 const TabletNavbar = () => {
-    return(
-      <div id="NavBarContainer">
-        <div id="PerfectBrideHeadingContainer">
-          <span id="PerfectBrideHeading">Perfect Bride</span>
-        </div>
-        <div id="HamburgerMenu">
-         <HamburgerIcon></HamburgerIcon>
-        </div>
+   // animation is based on https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav
+
+  const [openSideNavbar, setSideNavbarStatus] = useState(false);
+  let SideNavbar;
+  const changeSidebarStatus = () => {
+    if (openSideNavbar == true){
+      setSideNavbarStatus(false);
+      SideNavbar = <SideNavbar sideNavbarStatus={openSideNavbar}/>
+    }
+    else if (openSideNavbar == false){
+      setSideNavbarStatus(true);
+      SideNavbar = <SideNavbar sideNavbarStatus={openSideNavbar}/>
+    }
+  }
+  return(
+    <div id="NavBarContainer">
+      <div id="PerfectBrideHeadingContainer">
+        <span id="PerfectBrideHeading">Perfect Bride</span>
       </div>
+      <div id="HamburgerMenu" onClick={() => changeSidebarStatus()}>
+        <HamburgerIcon></HamburgerIcon>
+      </div>
+      {SideNavbar}
+    </div>
     )
   }
+
+const SideNavbar = (sideNavbarStatus) => {
+  let currentSideBarStatus;
+  if (sideNavbarStatus == null){
+    currentSideBarStatus = false;
+  }
+  else if (sideNavbarStatus == true){
+    currentSideBarStatus = true;
+  }
+  else if (sideNavbarStatus == false){
+    currentSideBarStatus = false;
+  }
+  return(
+    <div id="mySidenav" className="sidenav" style={{
+      width: currentSideBarStatus ? "250px" : "0px"}}>
+      <a className="closebtn">&times;</a>
+      <a>About</a>
+      <a>Services</a>
+      <a>Clients</a>
+      <a>Contact</a>
+    </div>
+  )
+}
   
 const MobileNavbar = () => {
   return (
