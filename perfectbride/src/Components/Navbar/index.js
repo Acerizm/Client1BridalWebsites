@@ -50,17 +50,7 @@ const SideNavbar = (props) => {
     currentSideBarStatus = false;
   }
   return(
-    <div id="mySidenav" className="sidenav" style={{
-      // height: "100%",
-      // position: "fixed",
-      // zIndex: "1",
-      // top: 0,
-      // left: 0,
-      // backgroundColor: "#111",
-      // overflowX: "hidden",
-      // transition: "0.5s",
-      // paddingTop: "60px",
-      width: currentSideBarStatus ? "250px" : "0px"}}>
+    <div id="mySidenav" className="sidenav" style={{width: currentSideBarStatus ? "250px" : "0px"}}>
       <a className="closebtn" onClick={() => props.changeSidebarStatus()}>&times;</a>
       <Link to={ROUTES.HOME_PAGE} className="link"><span className="NavLink">Home</span></Link>
       <Link to={ROUTES.ORGANIZER_PAGE} className="link"><span className="NavLink">Organizer</span></Link>

@@ -91,16 +91,26 @@
   }
 }
 
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 768px) and (max-width: 1199.99px){
   #HomePage {
     height: calc(170%);
     width: 100%;
+    background-color: black;
+    padding-top: 70px;
+  }
+  
+  #FirstContentContainer{
+    height: 30%;
+    width: 100%;
+    border: 2px solid black;
   }
 
   #WeddingPhoto{
-    height: 40%;
-    width: 70%;
-    margin-left: calc((100% - 70%) / 2 );
+    border: 2px solid #c68803;
+    border-left: none;
+    height: 100%;
+    width: 50%;
+    /*margin-left: calc((100% - 50%) / 2 );*/
     background-repeat: no-repeat;
     /* background-size: 100% 100%; */
     background-size: cover;
