@@ -164,23 +164,22 @@
   }
 
   #OtherImages1{
-    width: 90%;
     margin-left: 5%;
+    width: 90%;
     height: 80%;
-    margin-top: 10%;
     grid-row:1;
     grid-column: 2;
     background-repeat: no-repeat;
     /* background-size: 100% 100%; */
     background-size: cover;
     background-image: url("../../images/2.jpg");
+    transition: 0.8s;
   }
 
   #OtherImages2{
     width: 90%;
     margin-left: 5%;
     height: 80%;
-    margin-top: 10%;
     grid-row:1;
     grid-column: 3;
     background-repeat: no-repeat;
@@ -192,7 +191,6 @@
     width: 90%;
     margin-left: 5%;
     height: 80%;
-    margin-top: 10%;
     grid-row:1;
     grid-column: 4;
     background-repeat: no-repeat;
