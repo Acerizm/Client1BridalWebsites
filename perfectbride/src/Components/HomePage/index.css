@@ -164,8 +164,9 @@
   }
 
   #OtherImages1{
-    margin-left: 5%;
-    width: 90%;
+    /*margin-left: 5%;*/
+    /*width: 90%;*/
+    /*width: 100%;*/
     height: 80%;
     grid-row:1;
     grid-column: 2;
@@ -178,7 +179,7 @@
 
   #OtherImages2{
     width: 90%;
-    margin-left: 5%;
+    /*margin-left: 5%;*/
     height: 80%;
     grid-row:1;
     grid-column: 3;
@@ -186,13 +187,37 @@
     background-size: cover;
     background-image: url("../../images/19.jpg");
   }
-
-  #OtherImages3{
-    width: 90%;
-    margin-left: 5%;
+  
+  #OtherImages2Left{
+    width: 10%;
+    /*margin-left: 5%;*/
+    height: 80%;
+    grid-row:1;
+    grid-column: 3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../images/19.jpg");
+    transition: 0.8s;
+  }
+  
+  #OtherImages2Right{
+    width: 10%;
+    /*margin-left: calc(100% - 10%);*/
     height: 80%;
     grid-row:1;
     grid-column: 4;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../images/19.jpg");
+    transition: 0.8s;
+  }
+
+  #OtherImages3{
+    width: 90%;
+    /*margin-left: 5%;*/
+    height: 80%;
+    grid-row:1;
+    /*grid-column: 4;*/
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../../images/3.jpg");

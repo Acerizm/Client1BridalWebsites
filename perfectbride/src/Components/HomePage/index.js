@@ -50,9 +50,9 @@ const DesktopHomePage = (props) => {
 
 const TabletHomePage = (props) => {
   
-  const [currentImageClicked, setCurrentImageClickedIndex] = useState(0);
+  const [currentImageClicked, setCurrentImageClickedIndex] = useState(1);
   //let 0 be the event where the user does not hover the mouse on the images;
-  const [Image1Status,setImage1Status] = useState(false);
+  const [Image1Status,setImage1Status] = useState(true);
   const [Image2Status,setImage2Status] = useState(false);
   const [Image3Status,setImage3Status] = useState(false);
   
@@ -89,7 +89,20 @@ const TabletHomePage = (props) => {
     }
   }
   
+  //need to check if the middle image is going to the right or left
   
+  //1. Image 3 is chosen and Image 2 moves to the left
+  let currentImage2;
+  if (currentImageClicked == 3){
+    currentImage2 = <Image2TabletLeft/>
+  }
+  // 2. Image 1 is clicked and Image 2 moves to the right
+  else if(currentImageClicked == 1){
+    currentImage2 = <Image2TabletRight/>
+    console.log("test");
+  }
+  
+  console.log(currentImageClicked);
   
   return (
     <div id="HomePage">
@@ -102,18 +115,52 @@ const TabletHomePage = (props) => {
         </div>
       </div>
       <div id="OtherImagesArea">
+      {
+      /*
         <div id="OtherImages1"
           onClick={()=> setImageStatus(1)}
           onMouseLeave={()=> setImageStatus(1)}
           style={{
             gridColumnStart: Image1Status ? "2" : "2",
             gridColumnEnd: Image1Status ? "4" : "2",
-            width: Image1Status ? "100%" : "90%"
+            width: Image1Status ? "100%" : "10%"
           }}
+        >
+          
+        </div>
+        */
+      }
+        {/*<div id="OtherImages2"></div>*/}
+        {/*currentImage2*/}
+        <div id="OtherImages3"
+        onClick={()=> setImageStatus(3)}
+        onMouseLeave={()=> setImageStatus(3)}
+        style={{
+          gridColumnStart: Image3Status ? "4" : "4",
+          gridColumnEnd: Image3Status ? "2" : "4",
+          width: Image3Status ? "100%" : "20%",
+          // transition: "0.6s",
+          // animationDirection: "right",
+        }}
         ></div>
-        <div id="OtherImages2"></div>
-        <div id="OtherImages3"></div>
       </div>
+    </div>
+    )
+}
+
+const Image2TabletLeft = (props) => {
+  
+  return (
+    <div id="OtherImages2Left">
+    </div>
+    )
+}
+
+const Image2TabletRight = (props) => {
+  
+  return (
+    <div id="OtherImages2Right">
+      
     </div>
     )
 }
