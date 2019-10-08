@@ -93,16 +93,16 @@ const TabletHomePage = (props) => {
   
   //1. Image 3 is chosen and Image 2 moves to the left
   let currentImage2;
-  if (currentImageClicked == 3){
+  if ((currentImageClicked == 3 && Image3Status == true ) || (currentImageClicked == 1 && Image1Status == false) ){
+    console.log("Current Image Clicked is 3")
     currentImage2 = <Image2TabletLeft/>
   }
   // 2. Image 1 is clicked and Image 2 moves to the right
-  else if(currentImageClicked == 1){
-    currentImage2 = <Image2TabletRight/>
-    console.log("test");
+  else if((currentImageClicked == 1 && Image1Status == true ) || ( currentImageClicked == 3 && Image3Status == false)){
+    currentImage2 = <Image2TabletRight setImageStatus={setImageStatus} currentStatus={Image2Status}/>
+    // console.log("test");
   }
   
-  console.log(currentImageClicked);
   
   return (
     <div id="HomePage">
@@ -131,15 +131,18 @@ const TabletHomePage = (props) => {
         */
       }
         {/*<div id="OtherImages2"></div>*/}
-        {/*currentImage2*/}
+        {currentImage2}
         <div id="OtherImages3"
-        onClick={()=> setImageStatus(3)}
+        onClick={()=> {
+          setImageStatus(3);
+          setCurrentImageClickedIndex(3);
+        }}
         onMouseLeave={()=> setImageStatus(3)}
         style={{
           gridColumn: "4",
           width: Image3Status ? "200%" : "20%",
           transition: "0.6s",
-          marginLeft: Image3Status ? "-200%" : "0",
+          marginLeft: Image3Status ? "-200%" : "25%",
           // animationDirection: "right",
         }}
         ></div>
@@ -157,9 +160,16 @@ const Image2TabletLeft = (props) => {
 }
 
 const Image2TabletRight = (props) => {
+  console.log(props.currentStatus);
   
   return (
-    <div id="OtherImages2Right">
+    <div id="OtherImages2Right" 
+    onClick={()=> props.setImageStatus(2)}
+    style={{
+      width: props.currentStatus ? "200%" : "20%",
+      marginLeft: props.currentStatus ? "-200%" : "0"
+    }}
+    >
       
     </div>
     )

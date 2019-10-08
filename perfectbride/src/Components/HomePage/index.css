@@ -189,11 +189,12 @@
   }
   
   #OtherImages2Left{
-    width: 10%;
+    width: 20%;
     /*margin-left: 5%;*/
+    margin-left: calc(100% - 20% - 20%);
     height: 80%;
     grid-row:1;
-    grid-column: 3;
+    grid-column: 1;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../../images/19.jpg");
@@ -201,7 +202,7 @@
   }
   
   #OtherImages2Right{
-    width: 10%;
+    width: 20%;
     /*margin-left: calc(100% - 10%);*/
     height: 80%;
     grid-row:1;
