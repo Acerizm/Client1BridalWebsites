@@ -136,10 +136,10 @@ const TabletHomePage = (props) => {
         onClick={()=> setImageStatus(3)}
         onMouseLeave={()=> setImageStatus(3)}
         style={{
-          gridColumnStart: Image3Status ? "4" : "4",
-          gridColumnEnd: Image3Status ? "2" : "4",
-          width: Image3Status ? "100%" : "20%",
-          // transition: "0.6s",
+          gridColumn: "4",
+          width: Image3Status ? "200%" : "20%",
+          transition: "0.6s",
+          marginLeft: Image3Status ? "-200%" : "0",
           // animationDirection: "right",
         }}
         ></div>

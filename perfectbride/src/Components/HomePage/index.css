@@ -213,7 +213,7 @@
   }
 
   #OtherImages3{
-    width: 90%;
+    /*width: 90%;*/
     /*margin-left: 5%;*/
     height: 80%;
     grid-row:1;
@@ -221,5 +221,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../../images/3.jpg");
+  }
+  
+  @keyframes test {
+    from {
+      
+    }
   }
 }
