@@ -67,10 +67,12 @@ const TabletHomePage = (props) => {
       }
       else{
         currentStatus = false;
+        setImage2Direction("L")
       }
       setImage1Status(currentStatus);
     }
     else if (imageNum == 2){
+      debugger;
       let currentStatus;
       if (Image2Status == false){
         currentStatus = true;
@@ -88,6 +90,7 @@ const TabletHomePage = (props) => {
       }
       else{
         currentStatus = false;
+        setImage2Direction("R");
       }
       setImage3Status(currentStatus);
     }
@@ -101,8 +104,8 @@ const TabletHomePage = (props) => {
   || (currentImageClicked == 1 && Image1Status == false) 
   || (currentImageClicked == 2 && Image2Direction == "R")
   ){
-    console.log("Current Image Clicked is 3")
-    currentImage2 = <Image2TabletLeft/>
+    currentImage2 = <Image2TabletLeft setImageStatus={setImageStatus}
+      currentStatus={Image2Status} setCurrentImageClickedIndex={setCurrentImageClickedIndex}/>
   }
   // 2. Image 1 is clicked and Image 2 moves to the right
   else if((currentImageClicked == 1 && Image1Status == true ) 
@@ -131,10 +134,10 @@ const TabletHomePage = (props) => {
           onClick={()=> setImageStatus(1)}
           onMouseLeave={()=> setImageStatus(1)}
           style={{
-            gridColumnStart: Image1Status ? "1" : "2",
+            gridColumnStart: Image1Status ? "1" : "1",
             gridColumnEnd: Image1Status ? "5" : "2",
-            marginLeft: Image1Status ? "" : "",
-            width: Image1Status ? "100%" : "10%"
+            marginLeft: Image1Status ? "5%" : "calc(100% - 30% - 30% - 20%)",
+            width: Image1Status ? "100%" : "30%"
           }}
         >
         </div>
@@ -159,16 +162,22 @@ const TabletHomePage = (props) => {
 }
 
 const Image2TabletLeft = (props) => {
-  
+  console.log(props.currentStatus);
   return (
-    <div id="OtherImages2Left">
+    <div id="OtherImages2Left" onClick={()=> {
+      props.setImageStatus(2);
+      props.setCurrentImageClickedIndex(2);
+    }}
+    style={{
+      width: props.currentStatus ? "300%" : "30%",
+      
+    }}
+    >
     </div>
     )
 }
 
 const Image2TabletRight = (props) => {
-  console.log(props.currentStatus);
-  
   return (
     <div id="OtherImages2Right" 
     onClick={()=> {
