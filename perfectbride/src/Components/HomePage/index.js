@@ -64,21 +64,35 @@ const TabletHomePage = (props) => {
       if (Image1Status == false){
         currentStatus = true
         setImage2Direction("R");
+        setImage2Status(false);
+        // need to make sure image3 status is false
+        setImage3Status(false);
       }
       else{
         currentStatus = false;
         setImage2Direction("L")
+        // i need to trigger the part where the 2nd image
+        // is automatically enlarged :D
+        setImage2Status(true);
+  
+        
       }
       setImage1Status(currentStatus);
     }
     else if (imageNum == 2){
-      debugger;
       let currentStatus;
       if (Image2Status == false){
         currentStatus = true;
+        // make sure that both image 1 and image 3 status is false;
+        setImage1Status(false);
+        setImage3Status(false);
       }
       else{
         currentStatus = false;
+        // just make image 1 status true
+        setImage1Status(true);
+        setImage3Status(false);
+        setImage2Direction("L");
       }
       setImage2Status(currentStatus);
     }
@@ -87,10 +101,14 @@ const TabletHomePage = (props) => {
       if (Image3Status == false){
         currentStatus = true;
         setImage2Direction("L");
+        setImage2Status(false);
+        //make sure image1 status is false
+        setImage1Status(false);
       }
       else{
         currentStatus = false;
         setImage2Direction("R");
+        setImage2Status(true);
       }
       setImage3Status(currentStatus);
     }
@@ -131,8 +149,11 @@ const TabletHomePage = (props) => {
       </div>
       <div id="OtherImagesArea">
         <div id="OtherImages1"
-          onClick={()=> setImageStatus(1)}
-          onMouseLeave={()=> setImageStatus(1)}
+          onClick={()=> {
+          setImageStatus(1);
+          setCurrentImageClickedIndex(1);
+            
+          }}
           style={{
             gridColumnStart: Image1Status ? "1" : "1",
             gridColumnEnd: Image1Status ? "5" : "2",
@@ -162,7 +183,6 @@ const TabletHomePage = (props) => {
 }
 
 const Image2TabletLeft = (props) => {
-  console.log(props.currentStatus);
   return (
     <div id="OtherImages2Left" onClick={()=> {
       props.setImageStatus(2);
