@@ -20,7 +20,7 @@ const NavBar = () => {
   if (currentWindowWidth >= minDesktopWidth){
     currentNavbar = <DesktopNavBar/>
   }
-  else if(currentWindowWidth > minMobileWidth && currentWindowWidth < minDesktopWidth){
+  else if(currentWindowWidth >= minMobileWidth && currentWindowWidth < minDesktopWidth){
     currentNavbar = <TabletNavbar/>
   }
   else{
@@ -98,8 +98,37 @@ const TabletNavbar = () => {
 
   
 const MobileNavbar = () => {
-  return (
-    <div></div>
+ // animation is based on https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav
+
+  const [openSideNavbar, setSideNavbarStatus] = useState(false);
+  let currentSideNavbar;
+  //code will only run if called
+  const changeSidebarStatus = () => {
+    if (openSideNavbar === true){
+      setSideNavbarStatus(false);
+      currentSideNavbar = <SideNavbar sideNavbarStatus={openSideNavbar} changeSidebarStatus={changeSidebarStatus}/>
+    }
+    else if (openSideNavbar === false){
+      setSideNavbarStatus(true);
+      currentSideNavbar = <SideNavbar sideNavbarStatus={openSideNavbar} changeSidebarStatus={changeSidebarStatus}/>
+    }
+  }
+
+  let status = openSideNavbar;
+  //code will only run for the first time
+  if (currentSideNavbar == null){
+    currentSideNavbar = <SideNavbar sideNavbarStatus={status} changeSidebarStatus={changeSidebarStatus}/>
+  }
+  return(
+    <div id="NavBarContainer">
+      <div id="PerfectBrideHeadingContainer">
+        <span id="PerfectBrideHeading">Perfect Bride</span>
+      </div>
+      <div id="HamburgerMenu" onClick={() => changeSidebarStatus()}>
+        <HamburgerIcon></HamburgerIcon>
+      </div>
+      {currentSideNavbar}
+    </div>
     )
 }
   

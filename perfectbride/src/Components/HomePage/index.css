@@ -94,6 +94,7 @@
 @media only screen and (min-width: 768px) and (max-width: 1199.99px){
   #HomePage {
     height: calc(100%);
+    min-height: 1366px;
     width: 100%;
     background-color: black;
     padding-top: 70px;
