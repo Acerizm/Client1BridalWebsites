@@ -155,10 +155,12 @@ const TabletHomePage = (props) => {
             
           }}
           style={{
+            //here there is grid column start or column end
+            // as the transition animation works here as expected
             gridColumnStart: Image1Status ? "1" : "1",
             gridColumnEnd: Image1Status ? "5" : "2",
             marginLeft: Image1Status ? "5%" : "calc(100% - 30% - 30% - 20%)",
-            width: Image1Status ? "100%" : "30%"
+            width: Image1Status ? "93%" : "30%"
           }}
         >
         </div>
@@ -172,7 +174,7 @@ const TabletHomePage = (props) => {
         style={{
           gridColumn: "5",
           width: Image3Status ? "370%" : "30%",
-          transition: "0.6s",
+          transition: "0.8s",
           marginLeft: Image3Status ? "-300%" : "calc(35% + 5px)",
           // animationDirection: "right",
         }}
@@ -189,7 +191,7 @@ const Image2TabletLeft = (props) => {
       props.setCurrentImageClickedIndex(2);
     }}
     style={{
-      width: props.currentStatus ? "300%" : "30%",
+      width: props.currentStatus ? "367%" : "30%",
       
     }}
     >
@@ -206,8 +208,8 @@ const Image2TabletRight = (props) => {
       
     }}
     style={{
-      width: props.currentStatus ? "300%" : "30%",
-      marginLeft: props.currentStatus ? "-300%" : "0"
+      width: props.currentStatus ? "367%" : "30%",
+      marginLeft: props.currentStatus ? "-340%" : "0"
     }}
     >
       

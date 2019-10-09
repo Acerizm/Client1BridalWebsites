@@ -140,7 +140,8 @@
     width: 100%;
     color: #c68803;
     font-family: Arial;
-    font-size: 25px;
+    /*font-size: 25px;*/
+    font-size: 2.5vw;
     margin-top: 20px;
   }
 
@@ -148,7 +149,8 @@
     width: 100%;
     color: #c68803;
     font-family: Arial;
-    font-size: 25px;
+    /*font-size: 25px;*/
+    font-size: 2.5vw;
     margin-top: 20px;
   }
 
@@ -181,11 +183,13 @@
   #OtherImages2{
     width: 90%;
     /*margin-left: 5%;*/
-    height: 80%;
+    /*height: 80%;*/
+    height: auto;
+    /*object-fit: cover;*/
     grid-row:1;
     grid-column: 3;
     background-repeat: no-repeat;
-    background-size: cover;
+    /*background-size: cover;*/
     background-image: url("../../images/19.jpg");
     border: 5px solid #c68803;
   }
