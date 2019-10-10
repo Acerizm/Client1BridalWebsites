@@ -58,20 +58,20 @@ const DesktopSponsorPage = (props) => {
 const TabletSponsorPage = (props) => {
   return (
     <div id="SponsorsPageContainer">
-      <span id="SponsorTitle">{TEXT.SponsorTitle}</span>
+      <div id="SponsorTitle">{TEXT.SponsorTitle}</div>
       <div id="Sponsor1">
         <div className="SponsorImages" id="Sponsor1Image"></div>
-        <div id="SponsorTextArea">
-          <span className="SponsorsText" className="FirstSponsorText">{TEXT.Sponsor1Chi}</span>
-          <span className="SponsorsText" className="SecondSponsorText">{TEXT.Sponsor1Name}</span>
-          <span className="SponsorsText" className="ThirdSponsorText">{TEXT.Sponsor1Desc}</span>
+        <div className="SponsorTextArea" id="SponsorTextArea1">
+          <span className="FirstSponsorText">{TEXT.Sponsor1Chi}</span>
+          <span className="SecondSponsorText">{TEXT.Sponsor1Name}</span>
+          <span className="ThirdSponsorText">{TEXT.Sponsor1Desc}</span>
         </div>
       </div>
       <div id="Sponsor2">
-        <div id="SponsorTextArea">
-          <span className="SponsorsText" className="FirstSponsorText">{TEXT.Sponsor2Chi}</span>
-          <span className="SponsorsText" className="SecondSponsorText">{TEXT.Sponsor2Name}</span>
-          <span className="SponsorsText" className="ThirdSponsorText">{TEXT.Sponsor2Desc}</span>
+        <div className="SponsorTextArea" id="SponsorTextArea2">
+          <span className="FirstSponsorText">{TEXT.Sponsor2Chi}</span>
+          <span className="SecondSponsorText">{TEXT.Sponsor2Name}</span>
+          <span className="ThirdSponsorText">{TEXT.Sponsor2Desc}</span>
         </div>
         <div className="SponsorImages" id="Sponsor2Image"></div>
       </div>
