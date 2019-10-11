@@ -278,7 +278,7 @@
 }
 
 
-@media only screen and (max-width: 767.99px){
+@media only screen and (max-width: 766px){
    #SponsorsPageContainer{
     /*background-color: #f5ea74;*/
     background-color: black;
@@ -311,7 +311,7 @@
   }
 
   #Sponsor2{
-    height: calc(30%);
+    height: calc(40%);
     width: 100%;
     /*border-bottom: 2px solid black;*/
     /* border: 2px solid black; */
@@ -335,13 +335,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left:5%;
-    border: 5px solid grey;
+    /*margin-left:5%;*/
+    /*border: 5px solid grey;*/
+    margin-top: 20px;
   }
   
-  #SponsorTextArea1 {
-    margin-right: 5%;
-  }
+  /*#SponsorTextArea1 {*/
+  /*  margin-right: 5%;*/
+  /*}*/
 
   #Sponsor1Image{
     /*width: 300px;*/
@@ -366,33 +367,34 @@
     /* background-size: 100% 100%; */
     background-size: cover;
     background-image: url("../../images/Sponsor2.jpg");
-    border: 2px solid black;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-top: 20px;
+    /*border: 2px solid black;*/
+    /*margin-left: 5%;*/
+    /*margin-right: 5%;*/
   }
 
   .FirstSponsorText{
     margin-bottom: 5px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.5vw;
+    font-size: 3.0vw;
   }
 
   .SecondSponsorText{
     margin-bottom: 5px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.5vw;
+    font-size: 3.0vw;
   }
 
   .ThirdSponsorText{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.5vw;
+    font-size: 3.0vw;
   }
 
   #CollectiveSponsorDesc{
-    height: calc(100% - 10% - 30% - 30%);
+    height: calc(100% - 10% - 30% - 40%);
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -419,10 +421,10 @@
   }
 
   #InnerCollectiveSponsorText{
-    width: 95%;
+    width: 90%;
     height: 80%;
      /*border: 2px solid red; */
-    font-size: 2.0vw;
+    font-size: 3.0vw;
   }
 
 }

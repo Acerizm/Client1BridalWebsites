@@ -3,6 +3,10 @@ import React,{Component} from "react";
 import "./index.css";
 import * as Images from "../../images/index.js";
 
+//import window height here
+import {useWindowWidth, useWindowHeight} from "../ResponsiveComponent/index.js";
+import {minDesktopWidth,minMobileWidth,minTabletWidth} from "../ResponsiveComponent/index.js";
+
 const imageArray = [
   Images.Image1,
   Images.Image2,
@@ -45,6 +49,7 @@ class GalleryPage extends Component {
     let numOfTitles = this.state.numOfTitles;
     return(
       <div id="GalleryPageMainContainer">
+        <div id="GalleryHeading">Gallery</div>
         <div id="MainImageContainer">
           {/* Heavy logic here */}
           <div id="prev" onClick={()=> {
