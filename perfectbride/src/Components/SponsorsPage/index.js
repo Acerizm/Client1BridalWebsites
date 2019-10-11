@@ -99,12 +99,12 @@ const MobileSponsorPage = (props) => {
         </div>
       </div>
       <div id="Sponsor2">
+       <div className="SponsorImages" id="Sponsor2Image"></div>
         <div className="SponsorTextArea" id="SponsorTextArea2">
           <span className="FirstSponsorText">{TEXT.Sponsor2Chi}</span>
           <span className="SecondSponsorText">{TEXT.Sponsor2Name}</span>
           <span className="ThirdSponsorText">{TEXT.Sponsor2Desc}</span>
         </div>
-        <div className="SponsorImages" id="Sponsor2Image"></div>
       </div>
       <div id="CollectiveSponsorDesc">
         <div id="CollectiveSponsorTextBox">
