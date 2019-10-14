@@ -23,7 +23,7 @@
     }
     
     #MainVideo{
-        height: 50%;
+        height: 80%;
         width: 80%;
         margin-left: calc((100% - 80%) / 2 );
         margin-top: 50px;
