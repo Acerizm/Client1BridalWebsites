@@ -56,7 +56,7 @@ const SideNavbar = (props) => {
       <Link to={ROUTES.ORGANIZER_PAGE} className="link"><span className="NavLink">Organizer</span></Link>
       <Link to={ROUTES.SPONSORS_PAGE} className="link"><span className="NavLink">Sponsors</span></Link>
       <Link to={ROUTES.GALLERY_PAGE} className="link"><span className="NavLink">Gallery</span></Link>
-      <Link to={ROUTES.HOME_PAGE} className="link"><span className="NavLink">Videos</span></Link>
+      <Link to={ROUTES.VIDEOS_PAGE} className="link"><span className="NavLink">Videos</span></Link>
     </div>
   )
 }
@@ -141,7 +141,7 @@ const DesktopNavBar = () => {
           <Link to={ROUTES.ORGANIZER_PAGE} className="link"><span className="NavLink">Organizer</span></Link>
           <Link to={ROUTES.SPONSORS_PAGE} className="link"><span className="NavLink">Sponsors</span></Link>
           <Link to={ROUTES.GALLERY_PAGE} className="link"><span className="NavLink">Gallery</span></Link>
-          <Link to={ROUTES.HOME_PAGE} className="link"><span className="NavLink">Videos</span></Link>
+          <Link to={ROUTES.VIDEOS_PAGE} className="link"><span className="NavLink">Videos</span></Link>
         </div>
       </div>
     )
