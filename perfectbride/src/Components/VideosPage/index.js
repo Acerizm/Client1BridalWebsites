@@ -28,7 +28,9 @@ const DesktopVideosPage = (props) => {
         <div id="VideosPageContainer">
             <div id="PageTitle">Videos</div>
             <div id="MainContainer">
-                <video id="MainVideo"></video>
+                <video id="MainVideo" width="320" height="240" autoplay>
+                    <source src="../../Videos/1.mov" type="video/mp4"/>
+                </video>
             </div>
         </div>
         
